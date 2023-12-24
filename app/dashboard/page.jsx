@@ -16,7 +16,7 @@ const Dashboard = () => {
         <Transactions />
         <Chart />
       </div>
-      <div className={styles.sidebar}>
+      <div className={styles.side}>
         <Rightbar />
       </div>
     </div>

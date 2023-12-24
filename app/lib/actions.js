@@ -5,7 +5,7 @@ import { Product, User } from "./models";
 import { connectToDB } from "./utils";
 import { redirect } from "next/navigation";
 import bcrypt from "bcrypt";
-import { signIn } from "../auth";
+// import { signIn } from "../auth";
 
 export const addUser = async (formData) => {
   const { username, email, password, phone, address, isAdmin, isActive } =
@@ -158,7 +158,7 @@ export const authenticate = async (prevState, formData) => {
   const { username, password } = Object.fromEntries(formData);
 
   try {
-    await signIn("credentials", { username, password });
+    // await signIn("credentials", { username, password });
   } catch (err) {
     return "Wrong Credentials!";
   }

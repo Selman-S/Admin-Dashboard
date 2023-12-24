@@ -14,7 +14,6 @@ import {
   MdLogout,
 } from "react-icons/md";
 import { auth, signOut } from "@/app/auth";
-import { fetchUserByUsername } from "@/app/lib/data";
 
 const menuItems = [
   {
@@ -81,8 +80,6 @@ const menuItems = [
 
 const Sidebar = async () => {
   const { user } = await auth();
-
-console.log(user);
   return (
     <div className={styles.container}>
       <div className={styles.user}>

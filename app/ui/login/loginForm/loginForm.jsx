@@ -5,9 +5,11 @@ import styles from "./loginForm.module.css";
 import { useFormState } from "react-dom";
 
 const LoginForm = () => {
+
   const [state, formAction] = useFormState(authenticate, undefined);
 
-console.log('state',state);
+ 
+
   return (
     <form action={formAction} className={styles.form}>
       <h1>Login</h1>

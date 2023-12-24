@@ -12,8 +12,6 @@ const login = async (credentials) => {
 
 
     if (!user || !user.isAdmin) {
-
-      console.log('hata 1');
       throw new Error("Wrong credentials!");
     } 
 
@@ -24,8 +22,6 @@ const isPasswordCorrect = await bcrypt.compare(
 
   
   if (!isPasswordCorrect){
-
-    console.log('hata 2');
     throw new Error("Wrong credentials!");
   } 
   

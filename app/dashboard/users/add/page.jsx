@@ -14,6 +14,7 @@ const AddUserPage = () => {
           required
         />
         <input type="phone" placeholder="phone" name="phone" />
+        <input type="text" placeholder="image" name="img" />
         <select name="isAdmin" id="isAdmin">
           <option value={false}>
             Is Admin?

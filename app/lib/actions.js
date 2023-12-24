@@ -8,7 +8,7 @@ import bcrypt from "bcrypt";
  import { signIn } from "../auth";
 
 export const addUser = async (formData) => {
-  const { username, email, password, phone, address, isAdmin, isActive } =
+  const { username, email, password, phone, address, img,isAdmin, isActive } =
     Object.fromEntries(formData);
 
   try {
@@ -24,6 +24,7 @@ export const addUser = async (formData) => {
       phone,
       address,
       isAdmin,
+      img,
       isActive,
     });
 
@@ -38,7 +39,7 @@ export const addUser = async (formData) => {
 };
 
 export const updateUser = async (formData) => {
-  const { id, username, email, password, phone, address, isAdmin, isActive } =
+  const { id, username, email, password, phone, address,img, isAdmin, isActive } =
     Object.fromEntries(formData);
 
   try {
@@ -50,6 +51,7 @@ export const updateUser = async (formData) => {
       password,
       phone,
       address,
+      img,
       isAdmin,
       isActive,
     };
@@ -159,9 +161,12 @@ export const deleteProduct = async (formData) => {
 export const authenticate = async (prevState, formData) => {
   const { username, password } = Object.fromEntries(formData);
 
+
   try {
      await signIn("credentials", { username, password });
   } catch (err) {
+    console.log(err);
+    
     return "Wrong Credentials!";
   }
 };

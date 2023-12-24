@@ -26,7 +26,9 @@ const SingleUserPage = async ({ params }) => {
           <label>Password</label>
           <input type="password" name="password" />
           <label>Phone</label>
-          <input type="text" name="phone" placeholder={user.phone} />
+          <input type="text" name="phone" placeholder={user.phone} /> 
+          <label>Image</label>
+          <input type="text" name="img" placeholder={user.phone} />
           <label>Address</label>
           <textarea type="text" name="address" placeholder={user.address} />
           <label>Is Admin?</label>

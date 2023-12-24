@@ -3,12 +3,17 @@
 import { authenticate } from "@/app/lib/actions";
 import styles from "./loginForm.module.css";
 import { useFormState } from "react-dom";
+import { redirect } from "next/navigation";
 
-const LoginForm = () => {
+
+const LoginForm =  () => {
+
 
   const [state, formAction] = useFormState(authenticate, undefined);
-
- 
+  
+if (state) {
+  redirect('/dashboard')
+}
 
   return (
     <form action={formAction} className={styles.form}>

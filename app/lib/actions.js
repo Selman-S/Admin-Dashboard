@@ -163,7 +163,8 @@ export const authenticate = async (prevState, formData) => {
 
 
   try {
-     await signIn("credentials", { username, password });
+    const login =  await signIn("credentials", { username, password });
+    return login;
   } catch (err) {
     console.log(err);
     

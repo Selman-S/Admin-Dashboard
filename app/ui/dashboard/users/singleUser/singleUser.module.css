@@ -22,6 +22,9 @@
   overflow: hidden;
   margin-bottom: 20px;
 }
+.imgContainer img {
+  object-fit:cover;
+}
 
 .formContainer {
   flex: 3;

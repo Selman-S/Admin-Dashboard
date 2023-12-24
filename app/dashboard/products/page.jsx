@@ -42,10 +42,10 @@ const ProductsPage = async ({ searchParams }) => {
                     height={40}
                     className={styles.productImage}
                   />
-                  {product.title}
+                  { product.title.substring(0, 20)}
                 </div>
               </td>
-              <td>{product.desc}</td>
+              <td>{product.desc.substring(0, 30)}</td>
               <td>${product.price}</td>
               <td>{product.createdAt?.toString().slice(4, 16)}</td>
               <td>{product.stock}</td>

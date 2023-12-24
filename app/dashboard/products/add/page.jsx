@@ -15,6 +15,7 @@ const AddProductPage = () => {
         <input type="number" placeholder="price" name="price" required />
         <input type="number" placeholder="stock" name="stock" required />
         <input type="text" placeholder="color" name="color" />
+        <input type="text" placeholder="img" name="img" />
         <input type="text" placeholder="size" name="size" />
         <textarea
           required
